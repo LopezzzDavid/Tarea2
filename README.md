@@ -163,14 +163,66 @@
         <li>
           <strong> 2000 - Presente </strong>
         </li>
+        <ul>
+          <li>
+            <strong> <i> 2001 </i> </strong> ➡️ Georges-Olivier Reymond y otros científicos demostraron el uso de pinzas ópticas para atrapar átomos neutros individuales, logrando un control cuántico preciso partícula por partícula. Este avance abrió una nueva plataforma para el procesamiento de información cuántica y dio origen a la tecnología de Pasqal.
+          </li>
+          <li>
+             <strong> <i> 2011 </i> </strong> ➡️ D-Wave One (128 qubits) se convierte en la primera computadora cuántica disponible comercialmente
+          </li>
+          <li>
+            <strong> <i> 2016 </i> </strong> ➡️ IBM ofrece acceso público a computación cuántica vía su plataforma en la nube (IBM Quantum Experience), democratizando el acceso a hardware cuántico experimental.
+          </li>
+          <li>
+            <strong> <i> 2016 </i> </strong> ➡️ 2019 – Google, en colaboración con NASA, anuncia la consecución de la supremacía cuántica con su procesador de 54 qubits, al ejecutar una tarea que afirmaban sería impracticable para computadoras clásicas. IBM refutó parte de esta afirmación, generando debate científico.
+          </li>
+          <li>
+            <strong> <i> 2018-2025 </i> </strong> ➡️ Esta fase se conoce como la era NISQ (Noisy Intermediate-Scale Quantum), caracterizada por dispositivos con hasta ~1000 qubits, aunque aún sin corrección de errores completa. John Preskill acuña el término en 2018, y en 2023 se supera la barrera de los 1,000 qubits físicos (Atom Computing, 1,180 qubits)
+          </li>
+        </ul>
       </ul>
     </p>
 
     
   - ### Ventajas y desventajas
-    
+    # Ventajas y desventajas de la computación cuántica
+<p align = "center" >
+
+| **Ventajas**                                                                 | **Desventajas**                                                                 |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| 🚀 Velocidad y eficiencia en ciertos problemas: resolución exponencialmente más rápida que en computadores clásicos. | ⚠️ Fragilidad de los cúbits: muy sensibles al ruido y la decoherencia.           |
+| 🧪 Simulación precisa de sistemas cuánticos: moléculas, materiales y reacciones químicas. | ❄️ Necesidad de condiciones extremas: refrigeración casi al cero absoluto.      |
+| 🔎 Optimización avanzada en logística, finanzas, energía y telecomunicaciones. | 📉 Escalabilidad limitada: actualmente solo decenas o cientos de cúbits.        |
+| 🔐 Criptografía cuántica: desarrollo de comunicaciones ultra seguras (QKD).   | 💰 Altos costos y complejidad técnica en infraestructura y mantenimiento.       |
+| 🌐 Posibilidad de resolver problemas inalcanzables para supercomputadores clásicos. | 🔓 Riesgo para la seguridad actual: amenaza a los sistemas criptográficos clásicos (RSA, ECC). |
+|                                                                              | 🧪 Madurez tecnológica insuficiente: aún en fase experimental con aplicaciones limitadas. |
+
+</p>
+
   - ### Conceptos clave
-    s
+    <ul>
+      <li>
+        <ins> <i> Superposición </i> </ins>
+      </li>
+      <li>
+         <ins> <i> Entrelazamiento </i> </ins>
+      </li>
+      <li>
+         <ins> <i> Interferencia cuántica </i> </ins>
+      </li>
+      <li>
+         <ins> <i> Medición probabilística </i> </ins>
+      </li>
+      <li>
+         <ins> <i> Desafío de decoherencia </i> </ins>
+      </li>
+      <li>
+         <ins> <i> Tipos de comunicació cuántica </i> </ins>
+      </li>
+      <li>
+         <ins> <i> Compuertas cuánticas </i> </ins>
+      </li>
+    </ul>
 ## 2. Computador Neuromórfico
 
 
@@ -181,3 +233,5 @@
 4. [¿Qué es la computación cuántica? AWS](https://aws.amazon.com/es/what-is/quantum-computing/)
 5. [¿Cómo es una computadora cuántica? - La estructura física de una computadora cuántica](https://www.spinquanta.com/news-detail/what-does-a-quantum-computer-look-like-explain-key-parts20250116063551+)
 6. [Quantum Computing History: Path to Pasqal](https://www.pasqal.com/quantum-computing-history-path-to-pasqal/#1900s)
+7. [Quantum Computing: a Timeline](https://www.btq.com/blog/quantum-computing-a-timeline)
+8. [History of Quantum computing](https://www.livescience.com/technology/computing/history-of-quantum-computing-key-moments-that-shaped-the-future-of-computing)
