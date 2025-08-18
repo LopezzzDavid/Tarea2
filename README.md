@@ -268,8 +268,86 @@
       </li>
     </ul>
 ## 2. Computador Neuromórfico
+  
+  <p align = "justify">
+    Un computador neuromórfico (también llamado ingeniería neuromórfica) es un sistema de hardware y software diseñado para imitar el funcionamiento del cerebro humano. Integra elementos inspirados en neuronas y sinapsis reales, y procesa información de forma distribuida, paralela y altamente eficiente. <br/>
+    Este enfoque busca superar limitaciones de la arquitectura tradicional de von Neumann, especialmente en términos de consumo de energía y latencia.
+  </p>
 
+  - ### Arquitectura de un computador neuromórfico
+    <ul>
+      <li>
+        <strong> Entrada y codificación sensorial </strong>
+        <p align = "justify">
+          Son módulos que toman señales externas como imagen, audio, etc, y las convierten en <i> eventos (o spikes) </i> en lugar de cuadros continuos de datos. Esto reduce datos y latencia, solo emite algo cuando cambia la escena. Por ejemplo, cámaras de eventos (DVS) generan un evento por pixel cuando detectan un cambio de luminancia; si nada cambia, no emiten casi nada. <br/>
+        </p>
+      </li>
+      <li>
+        <strong> Núcleos neurosinápticos </strong>
+        <p align = "justify">
+          Agrupa las neuronas y sus sinapsis. Cada núcleo recibe spikes en axones (entradas), los pondera con una matriz sináptica y actualiza el estado de cada neurona; cuando una neurona supera umbral, emite un spike a la red.
+        </p>
+      </li>
+      <li>
+        <strong> Motor de plasticidad </strong>
+        <p align = "justify">
+          Es la lógica cerca de las sinapsis que actualiza pesos con reglas locales (por ejemplo, STDP, refuerzo, aprendizaje hebbiano). Permite aprendizaje on-chip sin ir a CPU externa, manteniendo el procesamiento en memoria y event-driven
+        </p>
+      </li>
+      <li>
+        <strong> Memoria sináptica y representación de pesos </strong>
+        <p lign = "justify">
+          Es dónde viven los pesos y metadatos (retrasos, “tipo de axón”, etc.). Suele ser SRAM distribuida por núcleo; en plataformas analógicas/memristivas puede ser NVM.dónde viven los pesos y metadatos (retrasos, “tipo de axón”, etc.). Suele ser SRAM distribuida por núcleo; en plataformas analógicas/memristivas puede ser NVM.Habilita el cómputo en memoria: el acceso a los pesos ocurre localmente para cada spike, sin tráfico a DRAM externo.
+        </p>
+      </li>
+      <li>
+        <strong> Red de interconexión </strong>
+        <p align = "justify">
+          Es la “malla” que transporta spikes como paquetes ligeros con la dirección del emisor o del destino: Address-Event Representation (AER). Enruta spikes de forma asíncrona y multicast (un spike se copia a muchos destinos), escalando a redes grandes con baja latencia.
+        </p>
+      </li>
+      <li>
+        <strong> Clúster neuromórfico </strong>
+        <p align = "justify">
+          Son topologías multi-chip/multi-nodo con routers de alto fan-out y encaminamiento tolerante a fallos. Permite simular/controlar redes neuronales masivas en tiempo biológico.
+        </p>
+      </li>
+      <li>
+        <strong> Temporización y ejecución asíncrona </strong>
+        <p align = "justify">
+          Muchos diseños evitan un reloj global; las actualizaciones ocurren al arribo de eventos o por clocks locales. Esto reduce consumo (no hay conmutación si no hay eventos) y elimina cuellos de botella de sincronización global.
+        </p>
+      </li>
+      <li>
+        <strong> Control y monitorización </strong>
+        <p align = "justify">
+          Son microcontroladores/cores de servicio que cargan configuraciones, inician experimentos, colectan métricas y comunican con el host. Esto orquesta el sistema sin intervenir en el tráfico fino de spikes.
+        </p>
+      </li>
+      <li>
+        <strong> Software y mapeo </strong>
+        <p align = "justify">
+          Son toolchains para compilar/redesplegar SNNs a núcleos (particionado, asignación de neuronas/sinapsis, ruteo). Traduce modelos (por ejemplo, PyNN/Loihi API) a configuraciones de hardware cumpliendo límites de fan-in/fan-out, memoria y latencias.
+        </p>
+      </li>
+    </ul>
 
+    Es decir que: Un sensor/event-encoder convierte señales en spikes. ▶️ Los spikes entran a un núcleo; la crossbar/tabla sináptica suma entradas, actualiza neuronas y emite nuevos spikes. ▶️ La NoC/AER reenvía esos spikes (multicast) a otros núcleos/chips. ▶️ Si hay plasticidad, el motor local ajusta pesos en tiempo real. ▶️ Los cores de control orquestan, miden y comunican con el host.
+    
+  - ### Ventajas y Desventajas
+    <p align = "center">
+
+| **Ventajas**                                                                 | **Desventajas**                                                                 |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| ⚡ **Alta eficiencia energética**: consumen mucho menos que los computadores tradicionales para tareas de IA. | 🛠️ **Tecnología inmadura**: aún en fase de investigación y desarrollo, con aplicaciones limitadas. |
+| 🧠 **Procesamiento paralelo masivo**: inspirado en el cerebro humano, permite gran capacidad de cómputo en tareas cognitivas. | 💰 **Alto costo de desarrollo**: fabricación y diseño de chips neuromórficos es costosa. |
+| 🔎 **Optimización en IA**: muy eficientes en reconocimiento de patrones, visión artificial, procesamiento sensorial y robótica. | 🔌 **Dificultad de integración**: falta de compatibilidad con arquitecturas clásicas de Von Neumann. |
+| 🌐 **Escalabilidad biológica**: permite crear redes que imitan al cerebro humano, facilitando avances en IA general. | 📉 **Limitaciones en software**: escasez de lenguajes y herramientas de programación adaptadas. |
+| 🔒 **Robustez en condiciones adversas**: algunos diseños toleran fallos y ruido en el procesamiento. | ❓ **Aplicaciones poco claras a gran escala**: su utilidad práctica frente a supercomputadores clásicos aún está en evaluación. |
+    </p>
+    
+  - ### Tipos de computación neuromórfica
+  
 # Referencias
 1. [Sintáxis de escritura y formato básicos](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 2. [Listas en HTML](https://www.mclibre.org/consultar/htmlcss/html/html-listas.html)
@@ -279,3 +357,6 @@
 6. [Quantum Computing History: Path to Pasqal](https://www.pasqal.com/quantum-computing-history-path-to-pasqal/#1900s)
 7. [Quantum Computing: a Timeline](https://www.btq.com/blog/quantum-computing-a-timeline)
 8. [History of Quantum computing](https://www.livescience.com/technology/computing/history-of-quantum-computing-key-moments-that-shaped-the-future-of-computing)
+9. [¿Qué es la computación neuromórfica? IBM](https://www.ibm.com/es-es/think/topics/neuromorphic-computing)
+10. [Overview of the SpiNNaker system Architecture](https://www.researchgate.net/publication/260585643_Overview_of_the_SpiNNaker_System_Architecture)
+11. 
