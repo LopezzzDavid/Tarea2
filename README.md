@@ -259,10 +259,10 @@
       <li>
          <ins> <i> Compuertas cuánticas </i> </ins>
         <p align = "justify">
-          Análogas a las compuertas lógicas clásicas, las compuertas cuánticas manipulan los qubits según un algoritmo o circuito.
-          - <strong> X gate <i>(NOT cuántico)</i> </strong>: invierte el estado del qubit 
-          - <strong> H gate <i>(Hadamard)</i> </strong>: Coloca a los qubits en estado de superposición
-          - <strong> CNOT <i>(Controlled-NOT)</i> </strong>: genera entrelazamiento, cambia el segundo cúbit solo si el primero es 1.
+          Análogas a las compuertas lógicas clásicas, las compuertas cuánticas manipulan los qubits según un algoritmo o circuito. <br/>
+          - <strong> X gate <i>(NOT cuántico)</i> </strong>: invierte el estado del qubit. <br/>
+          - <strong> H gate <i>(Hadamard)</i> </strong>: Coloca a los qubits en estado de superposición. <br/>
+          - <strong> CNOT <i>(Controlled-NOT)</i> </strong>: genera entrelazamiento, cambia el segundo cúbit solo si el primero es 1. <br/>
         </p>
         ⚛️ Si tenemos dos cúbits: El primero = 1, El segundo = 0. Después de pasar por una CNOT ➡️ el segundo se convierte en 1.
       </li>
