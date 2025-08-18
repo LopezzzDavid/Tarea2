@@ -185,7 +185,6 @@
 
     
   - ### Ventajas y desventajas
-    # Ventajas y desventajas de la computación cuántica
 <p align = "center" >
 
 | **Ventajas**                                                                 | **Desventajas**                                                                 |
@@ -203,24 +202,69 @@
     <ul>
       <li>
         <ins> <i> Superposición </i> </ins>
+        <p align = "justify">
+          Habla de la capacidad de una particula de estar en más de un estado al mismo tiempo. <br/>
+          🪙 Imaginemos una moneda lanzada al aire: mientras está girando, no es solo cara o sello, sino una mezcla de ambos. Cuando cae al piso (cuando se mide), se convierte en un resultado concreto.
+        </p>
       </li>
       <li>
          <ins> <i> Entrelazamiento </i> </ins>
+        <p align = "justify">
+          Establece que, sin importar la distancia, dos partículas cuánticas pueden conectarse de tal forma que lo que le sucede a una, instantáneamente afecta a la otra. <br/>
+          🛣️ Si entrelazamos dos monedas cuánticas y una resulta "cara", automáticamente la otra será "sello", incluso si están separadas por kilómetros.
+        </p>
       </li>
       <li>
          <ins> <i> Interferencia cuántica </i> </ins>
+        <p align = "justify">
+          Al estar las partículas en el estado de superposición, los posibles estados pueden sumarse o anularse, esto permite crear algoritmos que favorezcan respuestas o resultados correctos. <br/>
+          🌊 Pensemos en dos olas de agua: si coinciden, se refuerzan (interferencia constructiva); si están opuestas, se cancelan (interferencia destructiva).
+        </p>
       </li>
       <li>
          <ins> <i> Medición probabilística </i> </ins>
+        <p align = "justify">
+          Al tomar la medición de un qubit en estado de superposición, su medición no es concreta sino se determina por probabilidad. Esto explica el por qué es necesario repetir muchas veces los algoritmos cuánticos para obtener un resultado confiable. <br/>
+          📈 un cúbit puede estar en 70% de probabilidad de ser 0 y 30% de ser 1. Al medirlo, el resultado será 0 la mayoría de veces, pero a veces será 1.
+        </p>
       </li>
       <li>
          <ins> <i> Desafío de decoherencia </i> </ins>
+        <p>
+          Sucede cuando un qubit pierde su estado cuántico debido a interacciones con el ambiente, ya sea ruido, calor o radiación. <br/>
+          ⁉️ Es como si la moneda en el aire fuera golpeada por el viento antes de caer: ya no refleja la verdadera probabilidad, sino un error.
+        </p>
       </li>
       <li>
-         <ins> <i> Tipos de comunicació cuántica </i> </ins>
+         <ins> <i> Tipos de comunicación cuántica </i> </ins>
+        <ul>
+          <li>
+            <p align = "justify">
+              <ins> Distribución cuántica de claves </ins>: Esta distribución usa entrelazamiento para generar claves criptográficas imposibles de detectar.
+            </p>
+          </li>
+          <li>
+            <p align = "justify">
+              <ins> Teletransportación cuántica </ins>: transmite el estado cuántico de una partícula a otra distante, usando entrelazamiento, aunque la partícula en sí no viaja.
+            </p>
+          </li>
+          <li>
+            <p align = "justify">
+              <ins> Redes cuántica </ins>: Es la idea de un “Internet cuántico” basado en cúbits entrelazados.
+            </p>
+          </li>
+        </ul>
+        🏛️ La Universidad de Delft, en Países Bajos, logró en 2022 transmitir información cuántica entre tres nodos distintos usando entrelazamiento.
       </li>
       <li>
          <ins> <i> Compuertas cuánticas </i> </ins>
+        <p align = "justify">
+          Análogas a las compuertas lógicas clásicas, las compuertas cuánticas manipulan los qubits según un algoritmo o circuito.
+          - <strong> X gate <i>(NOT cuántico)</i> </strong>: invierte el estado del qubit 
+          - <strong> H gate <i>(Hadamard)</i> </strong>: Coloca a los qubits en estado de superposición
+          - <strong> CNOT <i>(Controlled-NOT)</i> </strong>: genera entrelazamiento, cambia el segundo cúbit solo si el primero es 1.
+        </p>
+        ⚛️ Si tenemos dos cúbits: El primero = 1, El segundo = 0. Después de pasar por una CNOT ➡️ el segundo se convierte en 1.
       </li>
     </ul>
 ## 2. Computador Neuromórfico
