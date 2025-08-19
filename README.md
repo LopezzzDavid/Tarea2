@@ -344,9 +344,119 @@
 | 🔎 **Optimización en IA**: muy eficientes en reconocimiento de patrones, visión artificial, procesamiento sensorial y robótica. | 🔌 **Dificultad de integración**: falta de compatibilidad con arquitecturas clásicas de Von Neumann. |
 | 🌐 **Escalabilidad biológica**: permite crear redes que imitan al cerebro humano, facilitando avances en IA general. | 📉 **Limitaciones en software**: escasez de lenguajes y herramientas de programación adaptadas. |
 | 🔒 **Robustez en condiciones adversas**: algunos diseños toleran fallos y ruido en el procesamiento. | ❓ **Aplicaciones poco claras a gran escala**: su utilidad práctica frente a supercomputadores clásicos aún está en evaluación. |
-    </p>
+  
+    
+  </p>
     
   - ### Tipos de computación neuromórfica
+    <ul>
+      <li>
+        <strong> Computación Neuromórfica Digital </strong>
+        <p align = "justify">
+          Es hardware construido en tecnología CMOS “clásica” (digital) pero organizado como redes de neuronas que disparan picos (spikes). En lugar de hacer grandes multiplicaciones de matrices (como una GPU), estas máquinas procesan eventos: cada pico es un mensaje diminuto que viaja por una red-on-chip hacia sus sinapsis destino. Así se ahorra energía cuando no hay actividad y se imita la dinámica temporal de los sistemas biológicos. Una revisión técnica que enmarca el área (y compara enfoques analógico vs. digital) es la de Indiveri & Liu (Proc. IEEE, 2015). Se compone por: <br/>
+          <ul>
+            <li>
+              <i> Neuronas y sinapsis digitales </i>
+            </li>
+            <li>
+              <i> Memoria local cercana al cómputo </i>
+            </li>
+            <li>
+              <i> Comunicación NoC / AER </i>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <strong> Computación neuromórfica analógica </strong>
+        <p align = "justify">
+          En lugar de representar los estados neuronales como números discretos en hardware digital (como en TrueNorth o Loihi), aquí se usan señales analógicas (voltajes, corrientes) y elementos físicos que imitan directamente la dinámica de membranas y sinapsis biológicas. Puede ser analógica pura: todo el cálculo (suma de corrientes, integración de voltajes) ocurre con leyes físicas continuas (Ohm, Kirchhoff, capacitancias). o puede ser mixta: se usan bloques analógicos para la dinámica neuronal/sináptica, pero control digital para configuración, comunicación o calibración. Para su arquitectura se pueden comprender cuatro bloques de funcionamiento: <br/>
+          <ul>
+            <li>
+              <i> Neuronas analógicas </i>
+              <p align = "justify">
+                Se implementan con transistores y condensadores que replican el modelo LIF (Leaky Integrate-and-Fire). Un capacitor acumula carga (potencial de membrana); cuando supera un umbral, un comparador genera un “spike”.
+              </p>
+            </li>
+            <li>
+              <i> Sinapsis analógica </i>
+              <p align = "justify">
+                Donde Resistores, transistores subumbral o memristores representan pesos sinápticos. La corriente que fluye depende del peso, lo que implementa la multiplicación peso × spike de forma natural.
+              </p>
+            </li>
+            <li>
+              <i> Plasticidad local </i>
+              <p align = "justify">
+                STDP (Spike-Timing Dependent Plasticity) puede implementarse directamente en hardware: el solapamiento temporal de señales cambia la conductancia de un memristor o transistor.
+              </p>
+            </li>
+            <li>
+              <i> Comunicación </i>
+              <p align = "justify">
+                Muchos chips usan AER (Address-Event Representation), como en digital, pero el núcleo neuronal es analógico. Otras implementaciones son completamente analógicas, con redes de voltajes acoplados.
+              </p>
+            </li>
+          </ul>
+        </p>
+      Conviene cuando se requiere eficiencia extrema (nanowatts por sinapsis), En prototipos de sistemas autónomos de bajo consumo (robots insectoides, sensores inteligentes) y sirve para estudiar modelos biológicos realistas con plasticidad emergente.
+      </li>
+      <li>
+        <strong> Computación neuromórfica Híbrida </strong>
+        <p>
+          Este enfoque combina lo mejor de los dos mundos:Bloques digitales (para control, programación, escalabilidad y comunicación robusta), Bloques analógicos (para emular la dinámica neuronal y sináptica con alta eficiencia energética) y Algoritmos bioinspirados (modelos simplificados del cerebro como el aprendizaje local, redes oscilatorias, plasticidad, etc.). En este tipo, un chip híbrido suele dividirse en tres niveles:
+          <ul>
+            <li>
+              Capa analógica (neuronal/sináptica)
+              <p align = "justify">
+                Implementa la dinámica del potencial de membrana y las sinapsis (p. ej., con condensadores, transistores en subumbral o memristores). Aquí ocurre el cómputo físico (integración, disparo, plasticidad local).
+              </p>
+            </li>
+            <li>
+              Capa digital (control y comunicación)
+              <p align = "justify">
+                Controla la configuración de parámetros (umbrales, pesos, tiempos de aprendizaje). Maneja la comunicación entre chips usando protocolos como AER (Address-Event Representation). Permite reprogramar redes sin necesidad de rediseñar el hardware.
+              </p>
+            </li>
+            <li>
+              Software bioinspirado (modelos de red)
+              <p align = "justify">
+                Algoritmos que se acercan al comportamiento del cerebro, como aprendizaje Hebbiano, STDP, homeostasis. Traducción de redes de IA convencionales a redes spiking para aprovechar el hardware híbrido.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <strong> Computación neuromórfica con Dispositivos emergentes </strong>
+        <p align = "justify">
+          Este enfoque usa nuevos materiales y tecnologías de hardware diferentes al silicio tradicional, inspirados directamente en la forma en que funcionan las neuronas y sinapsis biológicas. En lugar de implementar neuronas y sinapsis solo con transistores CMOS clásicos, se aprovechan dispositivos como:
+          <ul>
+            <li> 
+              <i> Memristores </i> ➡️ Componentes que recuerdan la corriente pasada (sinapsis con memoria).
+            </li>
+            <li>
+              <i> RRAM (Resistive RAM) </i> ➡️ Resistencias que cambian su valor según el voltaje aplicado.
+            </li>
+            <li>
+              <i> PCM (Phase-Change Memory) </i> ➡️ Materiales que cambian entre estados amorfo y cristalino (como una sinapsis plástica).
+            </li>
+            <li>
+              <i> Dispositivos spintrónicos </i> ➡️ Usan el espín del electrón, no solo su carga, para procesar.
+            </li>
+            <li>
+              <i> Nanofotónica </i> ➡️ Usa la luz para transmitir información como si fueran spikes neuronales.
+            </li>
+          </ul>
+        </p>
+      </li>
+      <li>
+        <strong> Computación neuromórfica Fotónica </strong>
+        <p align = "justify">
+          La computación neuromórfica fotónica utiliza luz (fotones) en lugar de electrones para procesar y transmitir información en sistemas que imitan al cerebro.
+En vez de transistores o memristores, se emplean láseres, moduladores ópticos, guías de onda y detectores de luz para construir "neuronas" y "sinapsis" artificiales. Funciona con una señal de entrada (un pulso de luz entra en un modulador óptico), luego ocurre un procesamiento neuromórfico, aquí la intensidad, fase o polarización de la luz se modifica (imitando cómo cambia la fuerza de una sinapsis), sigue una suma de señales en donde múltiples señales ópticas se combinan en un interferómetro, tal como lo hacen las neuronas al integrar impulsos. Por último ocurre una activación, es decir, un láser o detector convierte el resultado en una señal de salida óptica, lista para ser enviada a la siguiente "neurona".
+        </p>
+      </li>
+    </ul>
   
 # Referencias
 1. [Sintáxis de escritura y formato básicos](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
