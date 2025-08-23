@@ -14,6 +14,7 @@
 ## Introducción
   <P align = "justify">
     Por medio del siguiente documento se muestran diversas arquitecturas de computación que presentan un cambio importante frente a la computación clásica que aborda mayormente una arquitectura Von Neumann. Teniendo cinco (5) tipos de aarquitectura diferentes como lo son <strong> Computación cuántica </strong>, <strong> Computador neuromórfico </strong>, <strong> Ordenador biológico </strong>, <strong> Computación Heterogénea </strong> y <strong> Computación de borde </strong>.
+<<<<<<< HEAD
   
   Cada uno de estos modelos presenta fundamentos, arquitecturas y aplicaciones diferentes, pero todos comparten el objetivo común de <em>mejorar el rendimiento, la eficiencia y la capacidad de procesamiento de la información</em> frente a los desafíos actuales de la tecnología. Asimismo, se explorarán sus ventajas, desventajas, principales hitos históricos y el estado actual de desarrollo, con el fin de comprender su potencial y limitaciones.
   
@@ -470,3 +471,5 @@ En vez de transistores o memristores, se emplean láseres, moduladores ópticos,
 9. [¿Qué es la computación neuromórfica? IBM](https://www.ibm.com/es-es/think/topics/neuromorphic-computing)
 10. [Overview of the SpiNNaker system Architecture](https://www.researchgate.net/publication/260585643_Overview_of_the_SpiNNaker_System_Architecture)
 11. 
+=======
+>>>>>>> fb3b30a (Cargo archivo PDF y README)
